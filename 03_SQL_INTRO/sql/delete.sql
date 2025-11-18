@@ -4,5 +4,5 @@ SELECT * FROM funny_jokes
 WHERE rating < 5;
 
 -- now we delete them
-DELETE * FROM funny_jokes
+DELETE FROM funny_jokes
 WHERE rating < 5; 
