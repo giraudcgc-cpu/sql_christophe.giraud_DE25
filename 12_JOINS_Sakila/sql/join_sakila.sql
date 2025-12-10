@@ -1,4 +1,4 @@
--- Which actor has played whihc film_id? 
+-- Which actor has played which film_id? 
 -- With LEFT JOIN
 SELECT 
 a.actor_id,
@@ -9,7 +9,7 @@ FROM actor a
 LEFT JOIN film_actor ON fa.actor_id = a.actor_id
 LEFT JOIN film f ON f.film_id = fa.film_id;
 
--- All filsm with their cat
+-- All films with their cat
 SELECT
 f.title,
 c.name AS category
@@ -30,10 +30,10 @@ INNER JOIN category c ON category_id;
 
 -- Want to know the staff full address? = what the colum on the final table will show us
 -- In the ERD, we cannot see a "table" that contains all the info at once
--- but we seel links between them, common fields that they share
+-- but we see links between them, common fields that they share
 -- then we need to join tables/fields to get the final table
 FROM staff; -- address-id, firs_name, last_name
-FROM address, -- address-id, address, city_id
+FROM address; -- address-id, address, city_id
 FROM city; -- city_id, city, country_id
 FROM country; -- country_id, country
 
